@@ -1,1 +1,9 @@
-# Kura_C4_D7
+# Objective
+
+# Steps
+
+# Systems Diagram
+
+# Issues
+
+# Optimization

@@ -1,17 +1,16 @@
 FROM python:3.7
 
-RUN git clone https://github.com/kura-labs-org/c4_deployment-5.git
+RUN git clone https://github.com/bjones519/Kura_C4_D6.git
 
-WORKDIR c4_deployment-5
+WORKDIR Kura_C4_D6
 
+RUN pip install pip --upgrade
 RUN pip install -r requirements.txt
-
 RUN pip install gunicorn
-
+RUN pip install mysqlclient
 RUN python database.py
-
 RUN python load_data.py
 
 EXPOSE 8000
 
-ENTRYPOINT python -m gunicorn app:app -b 0.0.0.0
+ENTRYPOINT [ "python", "-m", "gunicorn", "app:app", "-b", "0.0.0.0" ]
