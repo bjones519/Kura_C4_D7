@@ -9,7 +9,7 @@ RUN pip install -r requirements.txt
 RUN pip install gunicorn
 RUN pip install mysqlclient
 RUN python database.py
-RUN python load_data.py
+#RUN python load_data.py
 
 EXPOSE 8000
 
